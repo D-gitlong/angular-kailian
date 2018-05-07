@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="zh-cmn-Hans" xmlns:ng="http://angularjs.org" ng-app="app">
+<head>
+  <meta charset="utf-8" />
+  <title>凯联商城</title>
+
+  <meta name="description" content="凯联商城" />
+  <meta name="keywords" content="凯联商城" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="yes" name="apple-touch-fullscreen">
+  <meta content="telephone=no,email=no" name="format-detection">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="css/app.base.css">
+
+  <link rel="stylesheet" href="css/app.main.css">
+
+  <script type="text/javascript">
+    var GLOBAL_CONFIG = {};
+  </script>
+  <script src="config/config.app.js"></script>
+  <script type="text/javascript" src="cordova.js"></script>
+</head>
+
+<body id="ng-app"
+      ng-controller="AppController"
+      ng-class="{'is-ie': app.useragent.isIE, 'is-weixin': app.useragent.isWeixin, 'is-mobile': app.useragent.isMobile, 'is-browser': app.useragent.isBrowser}">
+
+  <toast></toast>
+
+  <div class="app" id="app" ui-view>
+  </div>
+
+  <div class="splash" id="splash">
+    <div class="inner">
+      <img src="image/loading.png"/>
+    </div>
+  </div>
+
+  <script src="js/app.libs.js"></script>
+
+  <script src="js/app.base.js"></script>
+
+  <script src="js/app.main.js"></script>
+
+  <script type="text/javascript">
+    $(window).load(function(){
+      var el = $('#splash');
+      el.fadeOut(500, function(){
+        el.remove();
+      });
+    })
+  </script>
+
+</body>
+</html>
