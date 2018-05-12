@@ -9,4 +9,4 @@ angular1
 ## 线上开发环境地址：http://shop-dev.91go.com/h5/ <br/>
 测试账号：test 密码：123123
 
-## 也可以在App Store搜索“凯联健康”下载APP体验
+## 也可以在App Store或者Android应用中搜索“凯联健康”下载APP体验
